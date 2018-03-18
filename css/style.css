@@ -24,4 +24,8 @@
   .calc-keys {
     margin-bottom: 15px;
   }
-  
+	
+	input[type=button]{
+		max-width:82.5312px;
+		height:auto;
+	}
