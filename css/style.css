@@ -3,7 +3,7 @@
   }
   
   #calculator-body {
-    width: 350px;
+    width: 340px;
     border: 1px solid #999;
     border-radius: 10px;
     padding: 0px;
@@ -20,7 +20,7 @@
 		margin:15px auto;
     text-align: right;
     padding-right: 3px;
-    width: 320px;
+    width: 90%;
   }
   
   .calc-keys {
@@ -32,5 +32,5 @@
 		height:auto;
 	}
 	body{
-		padding: 5px !important;
+		padding: 10px !important;
 	}
