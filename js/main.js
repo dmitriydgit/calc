@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				if(event.target.type !== "button"  ) {
 					return;
 				}
+				// if(this.expression.length == 12){
+				// 	return;
+				// }
 				if(event.target === this.DOMs.backspace) {
 					this.expression = this.DOMs.display.value;
 					this.expression = this.expression.substring(0, this.expression.length - 1);
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 						return;
 					}
 					var temp = eval(this.memory);
-					this.DOMs.display.value = temp;
+					this.DOMs.display.value = ("" + temp).split("").slice(0 , 12).join("");
 					this.expression += this.memory;
 						return ;				
 				}
@@ -75,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					if(temp == "Infinity"){
 						return;
 					}
-					this.DOMs.display.value = temp; 
+					this.DOMs.display.value = ("" + temp).split("").slice(0 , 12).join(""); 
 					this.expression = temp.toString();
 					this.equals = "1";
 					return;
@@ -91,9 +94,13 @@ document.addEventListener("DOMContentLoaded", function() {
 						this.equals = "0"
 						return;	 	
 					}	
-					this.DOMs.display.value += event.target.value;
-					this.expression += event.target.value; 
-					this.equals = "0"
+				// if(this.expression.length == 12){
+				// 	return;
+				// }
+
+				this.DOMs.display.value += event.target.value;
+				this.expression += event.target.value; 
+				this.equals = "0"
 				}
 				
 			};
